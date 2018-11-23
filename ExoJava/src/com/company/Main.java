@@ -8,6 +8,12 @@ public class Main {
 
         email();
         arrayLoop();
+
+        double[] test = {1. , 2.};
+        double[] test1 = addToArray(test, 10.);
+        for (int i = 0; i < test1.length; i++) {
+            System.out.println(test1[i]);
+        }
     }
 
     public static void email() {
@@ -67,4 +73,15 @@ public class Main {
             list.add(Integer.toString(i));
         }
     }
+
+    public static double[] addToArray(double[] array, double val) {
+        double[] res = new double[array.length + 1];
+
+        for (int i = 0; i < array.length; i++) {
+            res[i] = array[i];
+        }
+        res[res.length - 1] = val;
+        return res;
+    }
+
 }
