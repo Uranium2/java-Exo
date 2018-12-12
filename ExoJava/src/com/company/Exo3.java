@@ -1,9 +1,7 @@
 package com.company;
 
 import java.io.IOException;
-import java.util.Scanner;
-
-import static java.lang.Math.abs;
+import java.util.*;
 
 public class Exo3 {
     public static void main(String[] args) throws IOException {
@@ -36,8 +34,7 @@ public class Exo3 {
     public static void nRight(String alpha, String str, int n) {
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j < alpha.length(); j++) {
-                if (str.charAt(i) == alpha.charAt(j))
-                {
+                if (str.charAt(i) == alpha.charAt(j)) {
                     if (j + n < alpha.length())
                         System.out.print(alpha.charAt(j + n));
                     else
@@ -47,11 +44,11 @@ public class Exo3 {
         }
         System.out.println();
     }
+
     public static void nLeft(String alpha, String str, int n) {
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j < alpha.length(); j++) {
-                if (str.charAt(i) == alpha.charAt(j))
-                {
+                if (str.charAt(i) == alpha.charAt(j)) {
                     if (j - n >= 0)
                         System.out.print(alpha.charAt(j - n));
                     else
@@ -60,5 +57,40 @@ public class Exo3 {
             }
         }
         System.out.println();
+    }
+
+    public static void isAnagram(String a, String b) {
+        if (a.length() != b.length()) {
+            System.out.println("NOT ANAGRAM");
+            return;
+        }
+        List<String> aList;
+        aList = Arrays.asList(a);
+        List<String> bList;
+        bList = Arrays.asList(a);
+
+        Collections.sort(aList);
+        Collections.sort(aList);
+
+        if (aList.equals(bList)) {
+            System.out.println("IS ANAGRAM");
+        }
+    }
+
+    public static void doesContains(String a, String b) {
+
+        List<String> aList;
+        aList = Arrays.asList(a);
+        List<String> bList;
+        bList = Arrays.asList(a);
+
+        Collections.sort(aList);
+        Collections.sort(aList);
+
+        if (aList.contains(bList))
+            System.out.println("DOES CONTAINS");
+        else
+            System.out.println("DOES NOT CONTAINSØ");
+
     }
 }
