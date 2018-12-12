@@ -9,19 +9,24 @@ public class Exo3 {
         Scanner sc2 = new Scanner(System.in);
         String alpha = sc1.nextLine();
         String str = sc2.nextLine();
+
+        checkValidity(alpha, str);
     }
 
-    public  void checkValidity(String alpha, String str){
+    public  static void checkValidity(String alpha, String str){
         for (int i = 0; i < alpha.length(); i++) {
             int tmp = 0;
             for (int j = 0; j < str.length(); j++) {
-                if (alpha.indexOf(i) == str.indexOf(j)) {
-                    tmp = 1;
+                if (alpha.charAt(i) == str.charAt(j)) {
+                    tmp++;
+                    System.out.println("yes");
                     break;
                 }
             }
-            if (tmp == 0)
+            if (tmp == 0) {
                 System.out.println("Not a valid char in alphabet");
+                break;
+            }
         }
     }
 }
