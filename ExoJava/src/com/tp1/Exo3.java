@@ -12,15 +12,15 @@ public class Exo3 {
             list.add(c);
         }
         try {
-            System.out.println(getSumThrow(list));
+            System.out.println(getAvgThrow(list));
         }catch (ArithmeticException e)
         {
             e.printStackTrace();
         }
-        System.out.println(getSum(list));
+        System.out.println(getAvg(list));
     }
 
-    public static Integer getSum(ArrayList<Character> list){
+    public static Integer getAvg(ArrayList<Character> list){
         if (list == null ||list.isEmpty())
             return 0;
 
@@ -38,7 +38,7 @@ public class Exo3 {
         return sum / i;
     }
 
-    public static Integer getSumThrow(ArrayList<Character> list) throws ArithmeticException{
+    public static Integer getAvgThrow(ArrayList<Character> list) throws ArithmeticException{
         if (list == null ||list.isEmpty())
             return 0;
 
