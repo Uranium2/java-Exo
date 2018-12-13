@@ -23,6 +23,7 @@ public class Exo2 {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Cannot read line");
+            sou
         }
         int res = sumAll(results);
         System.out.printf("Average score is: " + res);

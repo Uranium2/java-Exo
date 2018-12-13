@@ -1,10 +1,9 @@
 package com.company;
 
-import java.io.IOException;
 import java.util.*;
 
 public class Exo3 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
         String alpha = sc1.nextLine();
         String str = sc1.nextLine();
