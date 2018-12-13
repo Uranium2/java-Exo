@@ -2,7 +2,7 @@ package com.tp1;
 
 import java.util.*;
 
-public class Exo3 {
+public class Exo4 {
     public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
         String alpha = sc1.nextLine();
