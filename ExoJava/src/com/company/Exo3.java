@@ -6,16 +6,29 @@ import java.util.*;
 public class Exo3 {
     public static void main(String[] args) throws IOException {
         Scanner sc1 = new Scanner(System.in);
-        Scanner sc2 = new Scanner(System.in);
         String alpha = sc1.nextLine();
-        String str = sc2.nextLine();
+        String str = sc1.nextLine();
 
-        checkValidity(alpha, str);
+        if (isValid(alpha, str))
+            System.out.println("String is valid in the alphabet");
+        else
+            System.out.println("String is not valid in the alphabet");
+
         nRight(alpha, str, 2);
         nLeft(alpha, str, 2);
+
+        if (isAnagram("abc", "bac"))
+            System.out.println("Is Anagram");
+        else
+            System.out.println("Not Anagram");
+        if (doesContains("ab", "rherwabrwo"))
+            System.out.println("Does Contains");
+        else
+            System.out.println("Does not Contains");
+
     }
 
-    public static void checkValidity(String alpha, String str) {
+    public static boolean isValid(String alpha, String str) {
         for (int i = 0; i < alpha.length(); i++) {
             int tmp = 0;
             for (int j = 0; j < str.length(); j++) {
@@ -25,10 +38,10 @@ public class Exo3 {
                 }
             }
             if (tmp == 0) {
-                System.out.println("Not a valid char in alphabet");
-                break;
+                return  false;
             }
         }
+        return true;
     }
 
     public static void nRight(String alpha, String str, int n) {
@@ -59,38 +72,26 @@ public class Exo3 {
         System.out.println();
     }
 
-    public static void isAnagram(String a, String b) {
+    public static boolean isAnagram(String a, String b) {
         if (a.length() != b.length()) {
-            System.out.println("NOT ANAGRAM");
-            return;
+            return false;
         }
-        List<String> aList;
-        aList = Arrays.asList(a);
-        List<String> bList;
-        bList = Arrays.asList(a);
+        char[] aList = a.toCharArray();
+        char[] bList = b.toCharArray();
 
-        Collections.sort(aList);
-        Collections.sort(aList);
+        Arrays.sort(aList);
+        Arrays.sort(bList);
 
-        if (aList.equals(bList)) {
-            System.out.println("IS ANAGRAM");
+        if (Arrays.equals(aList, bList)) {
+            return true;
         }
+        return false;
     }
 
-    public static void doesContains(String a, String b) {
-
-        List<String> aList;
-        aList = Arrays.asList(a);
-        List<String> bList;
-        bList = Arrays.asList(a);
-
-        Collections.sort(aList);
-        Collections.sort(aList);
-
-        if (aList.contains(bList))
-            System.out.println("DOES CONTAINS");
+    public static boolean doesContains(String a, String b) {
+        if (b.contains(a))
+            return true;
         else
-            System.out.println("DOES NOT CONTAINSØ");
-
+            return false;
     }
 }
