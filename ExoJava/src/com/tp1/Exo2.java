@@ -1,4 +1,4 @@
-package com.company;
+package com.tp1;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -11,7 +11,7 @@ public class Exo2 {
         BufferedReader reader;
         ArrayList<Integer> results = new ArrayList<>();
         try {
-            reader = new BufferedReader(new FileReader("C:\\Users\\Tavernier\\Documents\\Cours\\JAVA\\projets\\ExoJava\\src\\com\\company\\sample.txt"));
+            reader = new BufferedReader(new FileReader("C:\\Users\\Tavernier\\Documents\\Cours\\JAVA\\projets\\ExoJava\\src\\com\\tp1\\sample.txt"));
             String line;
             while ((line = reader.readLine()) != null) {
                 Integer score = Integer.parseInt(line.substring(line.indexOf(":") + 1));
@@ -23,7 +23,6 @@ public class Exo2 {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Cannot read line");
-            sou
         }
         int res = sumAll(results);
         System.out.printf("Average score is: " + res);
@@ -41,7 +40,7 @@ public class Exo2 {
         BufferedReader reader ;
         ArrayList<String> emails = new ArrayList<>();
         try {
-            reader = new BufferedReader(new FileReader("C:\\Users\\Tavernier\\Documents\\Cours\\JAVA\\projets\\ExoJava\\src\\com\\company\\sample.txt"));
+            reader = new BufferedReader(new FileReader("C:\\Users\\Tavernier\\Documents\\Cours\\JAVA\\projets\\ExoJava\\src\\com\\tp1\\sample.txt"));
 
             String line;
             while ((line = reader.readLine()) != null) {
