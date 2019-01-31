@@ -15,4 +15,8 @@ public class Service {
     public void addEmployee(Employee e) {
         this.employeeArrayList.add(e);
     }
+
+    public  boolean equals(Service s) {
+        return s.name.equals(this.name) && s.employeeArrayList .equals(this.employeeArrayList);
+    }
 }
