@@ -19,7 +19,7 @@ public class Main {
 
 
         /* PART 2 */
-
+        /* A */
         ArrayList<Employee> employeeArrayList = new ArrayList<>();
         employeeArrayList.add(new Employee("Kevin", "Boudin", 13000.00, new Address(12, "Rue AZERTY")));
         employeeArrayList.add(new Employee("Paul", "Babouin", 13000.00, new Address(42, "Rue AZERTY")));
@@ -39,6 +39,42 @@ public class Main {
         System.out.println("\nPeople see him and kill the stranger, thus removing him from the list\n");
         service.removeEmployee("Kalil");
         service.print();
+
+        /* B */
+
+
+        Person person1 = new Person("Toto", "Balou", 3, null, null, new ArrayList<Person>(), false);
+        Person person2 = new Person("Tutu", "Balou", 30, null,null, new ArrayList<Person>(), true);
+        Person person3 = new Person("Tata", "Balou", 28, null,null, new ArrayList<Person>(), false);
+
+        person1.addMother(person3);
+        person1.addFather(person2);
+
+        // Dans l'implem de Person, on vérifie bien les conditions d'un pere/mere. Dès qu'on rajoute un parent ou un fils, on met a jour ses attributs pour ne pas avoir d'incohérence
+
+        /* C */
+
+        Student student1 = new Student("Jack", null);
+        Student student2 = new Student("Jacki", null);
+        Student student3 = new Student("Jacky", null);
+        Student student4 = new Student("Jackouille", null);
+        Student student5 = new Student("Jaquoille", null);
+
+        Course course1 = new Course("Java", new ArrayList<>());
+        Course course2 = new Course("Maths", new ArrayList<>());
+
+        course1.addStudent(student1);
+        course1.addStudent(student2);
+        course1.addStudent(student3);
+        course1.addStudent(student4);
+        course1.addStudent(student5);
+
+        course2.addStudent(student1);
+        course2.addStudent(student2);
+        course2.addStudent(student3);
+
+
+
 
 
 
