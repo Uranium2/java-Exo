@@ -29,4 +29,24 @@ public class Employee implements Cloneable {
         e.address = (Address) super.clone();
         return e;
     }
+
+    public void print() {
+        System.out.println(getName() + ' ' + getSurname() + ' ' + getAddress().num + ' ' + getAddress().sheet + ' ' + getSalary());
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
 }
