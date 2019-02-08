@@ -1,5 +1,8 @@
 package com.tp1;
 
+import com.tp2.Employee;
+import com.tp2.Service;
+
 public class Project {
     Employee employee;
     Service service;

@@ -1,4 +1,4 @@
-package com.tp1;
+package com.tp2;
 
 public class Employee implements Cloneable {
     private String name;
