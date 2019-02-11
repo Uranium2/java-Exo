@@ -25,9 +25,12 @@ public class Mark {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj.getClass() != this.getClass())
+        Mark tmp;
+        if (obj instanceof Mark) {
+            tmp = (Mark)obj;
+        } else
             return false;
-        Mark tmp = (Mark)obj;
+
         return tmp.getSubject().equals(this.getSubject()) && tmp.getValue() == this.getValue();
     }
 

@@ -40,9 +40,12 @@ public class Application {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj.getClass() != Application.class)
+        Application app;
+        if (obj instanceof Application) {
+            app = (Application)obj;
+        }
+        else
             return false;
-        Application app = (Application)obj;
         for (int i = 0; i < this.marks.size(); i++) {
             for (int j = 0; j < this.marks.get(i).size(); j++) {
                 if (!this.getMark(i, j).equals(app.marks.get(i).get(j)))
