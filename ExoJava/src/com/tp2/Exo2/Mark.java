@@ -22,4 +22,12 @@ public class Mark {
     public void setSubject (String subject) {
         this. subject = subject;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj.getClass() != this.getClass())
+            return false;
+        Mark tmp = (Mark)obj;
+        return tmp.getSubject().equals(this.getSubject()) && tmp.getValue() == this.getValue();
+    }
 }
