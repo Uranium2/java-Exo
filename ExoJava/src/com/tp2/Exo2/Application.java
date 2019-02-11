@@ -101,6 +101,17 @@ public class Application {
         return marks.get(pos).size() - 1;
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Application appClone = new Application(marks.size());
+        for (int i = 0; i < marks.size(); i++) {
+            for (int j = 0; j < marks.get(i).size(); j++) {
+                appClone.add(i, marks.get(j).get(j).getSubject(), marks.get(i).get(j).getValue());
+            }
+        }
+        return appClone;
+    }
+
     public float [] avgs() {
         float[] avgs = new float[this.getNbStudents() + 1];
 
