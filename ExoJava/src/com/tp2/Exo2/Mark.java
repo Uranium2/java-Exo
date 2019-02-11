@@ -1,5 +1,7 @@
 package com.tp2.Exo2;
 
+import java.util.Objects;
+
 public class Mark {
     private float value; // désigne la moyenne de la note pour la matière
     private String subject; // désigne le nom de la matière
@@ -21,6 +23,11 @@ public class Mark {
     }
     public void setSubject (String subject) {
         this. subject = subject;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(subject, value);
     }
 
     @Override
