@@ -1,4 +1,4 @@
-package com.tp2;
+package com.tp2.Preambule;
 
 public class Tuple<X, Y> {
     public final X x;

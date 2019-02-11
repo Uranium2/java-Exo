@@ -1,4 +1,4 @@
-package com.tp2;
+package com.tp2.Preambule;
 
 class Class1 {
     int a;

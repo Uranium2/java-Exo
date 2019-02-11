@@ -1,4 +1,4 @@
-package com.tp2;
+package com.tp2.Preambule;
 
 public class Employee implements Cloneable {
     private String name;

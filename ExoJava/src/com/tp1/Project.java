@@ -1,7 +1,7 @@
 package com.tp1;
 
-import com.tp2.Employee;
-import com.tp2.Service;
+import com.tp2.Preambule.Employee;
+import com.tp2.Preambule.Service;
 
 public class Project {
     Employee employee;
