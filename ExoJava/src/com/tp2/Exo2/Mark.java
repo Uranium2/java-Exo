@@ -30,4 +30,9 @@ public class Mark {
         Mark tmp = (Mark)obj;
         return tmp.getSubject().equals(this.getSubject()) && tmp.getValue() == this.getValue();
     }
+
+    @Override
+    public String toString() {
+        return subject + ":" + value;
+    }
 }
