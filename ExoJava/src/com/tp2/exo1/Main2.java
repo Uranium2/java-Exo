@@ -1,4 +1,4 @@
-package com.tp2.Exo1;
+package com.tp2.exo1;
 
 public class Main2 {
     public static void main(String[] args) {

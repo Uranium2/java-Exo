@@ -1,4 +1,4 @@
-package com.tp2.Exo2;
+package com.tp2.exo2;
 
 import java.util.Objects;
 

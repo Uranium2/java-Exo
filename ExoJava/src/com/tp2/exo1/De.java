@@ -1,4 +1,4 @@
-package com.tp2.Exo1;
+package com.tp2.exo1;
 
 import java.util.ArrayList;
 import java.util.Random;

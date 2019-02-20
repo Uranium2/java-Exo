@@ -1,4 +1,4 @@
-package com.tp2.Preambule;
+package com.tp2.preambule;
 
 public class Class3 extends Class2 {
     protected int f;

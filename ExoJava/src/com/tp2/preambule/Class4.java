@@ -1,4 +1,4 @@
-package com.tp2.Preambule;
+package com.tp2.preambule;
 
 public class Class4 extends Class2 {
     public Class4(int b, int c, int d, int e) {
