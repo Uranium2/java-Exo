@@ -1,4 +1,4 @@
-package com.tp3;
+package com.tp3.exo1;
 
 import java.lang.reflect.Method;
 
