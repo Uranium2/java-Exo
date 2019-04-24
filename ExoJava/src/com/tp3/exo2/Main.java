@@ -20,5 +20,9 @@ public class Main {
         }
         System.out.println("Total Salary :" + sum);
         }
+        int[] array;
+        public static void apply(int[] arr, Compute com){
+            
+        }
 }
 
