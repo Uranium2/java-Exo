@@ -1,6 +1,6 @@
 package com.tpHeritage.excercie3;
 
-public class Building {
+public abstract class Building {
     String owner;
     String address;
     Double area;
@@ -35,12 +35,7 @@ public class Building {
         this.area = area;
     }
 
-    public Double tax() {
-        // switch on building type
-        return 0.0;
-    }
+    public abstract Double tax();
 
-    public void print() {
-        System.out.println("Äddress: " + getAddress() + " Owner: " + getOwner() + "" + getArea());
-    }
+    public abstract void print();
 }
