@@ -41,6 +41,6 @@ public class Building {
     }
 
     public void print() {
-        System.out.println(getAddress() + getOwner() + getArea());
+        System.out.println("Äddress: " + getAddress() + " Owner: " + getOwner() + "" + getArea());
     }
 }
