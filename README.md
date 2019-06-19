@@ -16,3 +16,5 @@ List of given exercise for Java programming.
 # Chapter 1
 
 # Chapter 2
+
+I start to think that Java will be the futur Cobol. Everyone is learning it, lots of applications. But no one wants to work on it.
